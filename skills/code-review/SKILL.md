@@ -119,6 +119,26 @@ behavior — "returns empty array when no results found" is the target shape.
 Check the edge cases the change introduces: empty, null, boundary values, and the
 error path. New error handling with no test exercising it is a Warning.
 
+## What not to flag
+
+A review loses its value the moment it reads as noise, so the findings you leave out
+matter as much as the ones you raise. Leave these alone:
+
+- **Anything the conventions above do not cover.** A personal style preference is not
+  a finding. If it is not a rule here, it is not a rule.
+- **The same problem repeated.** Report the pattern once, with the clearest example and
+  a count, rather than once per occurrence. Ten identical findings read as ten problems
+  and get skimmed as one.
+- **Code the diff only moved.** A pure move or rename is not an invitation to review
+  logic nobody touched.
+- **Generated files** — lockfiles, build output, snapshots. Review the input that
+  produced them instead.
+- **Speculative failure modes** you cannot tie to the code in front of you. "This might
+  not scale" is a conversation, not a finding; if it genuinely matters, it is
+  NEEDS DISCUSSION with a stated reason.
+
+One Critical finding with a clear fix is worth more than twelve Suggestions.
+
 ## Output format
 
 Group findings by severity, Critical first, then Warning, then Suggestion. Omit any

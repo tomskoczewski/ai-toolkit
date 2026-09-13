@@ -533,13 +533,13 @@ renaming the package after `0.1.0` ships would orphan every installed rules bloc
 - [x] 3.3 Workflow file parses as YAML
 - [x] 3.4 scope "@tomskoczewski" appears in both setup-node steps
 - [x] 3.5 No twoj-zespol, AWS, CodeArtifact or id-token references in the workflow
-- [ ] 3.6 Workflow run succeeds after the push
-- [ ] 3.7 Version 0.1.0 resolves from the registry
+- [x] 3.6 Workflow run succeeds after the push
+- [x] 3.7 Version 0.1.0 resolves from the registry
 
 #### Manual
 
-- [ ] 3.8 Packages tab shows the package linked to this repository
-- [ ] 3.9 validate job shows the double-install assertion passing
+- [x] 3.8 Packages tab shows the package linked to this repository
+- [x] 3.9 validate job shows the double-install assertion passing
 
 ### Phase 4: Second release and evidence
 
